@@ -1,0 +1,111 @@
+---
+import PortfolioItem from '@components/PortfolioItem';
+import SimplePortfolioItem from '@components/SimplePortfolioItem';
+import Card from '@components/Card';
+import CardContainer from '@components/CardContainer';
+import AboutCard from '@components/AboutCard.astro';
+import { portfolioData } from '@utils/portfolioData';
+import TechStackCard from '@components/TechStackCard.astro';
+import SocialIcon from '@components/ui/SocialIcon.astro';
+---
+<section>
+    <CardContainer client:load>
+      <Card client:load className="lg:row-span-2 ring-primary/5 bg-white dark:bg-secondary shadow-xl dark:shadow-thick rounded-3xl p-8">      
+        
+        <p
+          class="text-sm text-zinc-500 dark:text-zinc-400 font-light lg:text-lg"
+        >
+        👋 Hi, I'm Demi Yang.
+        <br />
+          <br />
+          I'm a software engineer and web designer living in Berlin. I enjoy building beautiful and impactful websites for businesses.
+          <br />
+          <br />
+          🌍 Remote work is here to stay! I'm on a mission to help people find remote jobs with <a href="https://careervault.io" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 underline">Career Vault — A modern remote job board</a> and help companies realize the potential of hiring talent from around the world.
+          <br />
+          <br />
+          Things I do in my free time:
+          <br />
+          🏀 Basketball
+          <br />
+          🏋️‍♀️ Bodybuilding
+          <br />
+          🎱 Billiards
+          <br />
+          🎤 Singing
+        </p>
+      </Card>
+    <!-- </HoverEffect> -->
+      <Card
+      client:load className="ring-primary/5 rounded-3xl justify-between shadow-xl dark:shadow-thick items-center flex flex-col p-8 h-full bg-white  dark:bg-secondary"
+      >
+        <div class="w-full">
+          <p
+            class="text-xl font-normal tracking-tight text-primary dark:text-white lg:text-2xl"
+          >
+            Let's work together!
+          </p>
+          <p
+          class="mt-4 text-sm text-zinc-500 dark:text-zinc-400 font-light lg:text-lg"
+        >
+          I'm currently freelancing and open to project inquiries as well as full-time job opportunities. <br />
+          <br />P.S. Follow me on LinkedIn for content about recruitment and remote work.
+        </p>
+        </div>
+        <div class="grid mt-12 grid-cols-4 md:grid-cols-8 lg:grid-cols-4 gap-y-4 gap-4 justify-center w-full">
+          <SocialIcon href="mailto:demiyang12@gmail.com" icon="mail" label="Email" />
+          <SocialIcon href="https://github.com/DemiliciousOne" icon="github" label="GitHub" />
+          <SocialIcon href="https://www.linkedin.com/in/demiyang12/" icon="linkedin" label="LinkedIn" />
+        </div>
+      </Card>
+      <Card client:load
+        className="lg:row-span-1 flex flex-col justify-between group hover:ring-primary/10 duration-300 h-full ring-primary/5 lg:row-start-2 md:grid-cols-2 md:grid lg:gap-0 md:items-center md:gap-12 lg:grid-cols-none lg:col-start-2 lg:col-span-2 rounded-3xl p-8 bg-white dark:bg-secondary shadow-xl dark:shadow-thick"
+      >
+        <AboutCard/>
+      </Card>
+      <Card client:load
+        className="ring-1 dark:ring-white/10  ring-primary/5 flex flex-col justify-between items-center rounded-3xl shadow-xl dark:shadow-thick p-8  bg-white dark:bg-secondary overflow-hidden lg:text-left"
+      >
+        <div>
+          <p
+            class="text-xl text-primary dark:text-white md:text-2xl tracking-tight"
+          >
+            My resume
+          </p>
+          <p class="mt-4 text-sm font-light lg:text-lg text-zinc-500 dark:text-zinc-400 md:max-w-xs lg:max-w-none">
+            See more details about the projects I've worked on and my work experience. 
+          </p>
+        </div>
+        <div class="w-full mt-8 md:max-w-xs lg:max-w-none">
+          <button
+            type="button"
+            class="text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary dark:bg-white dark:text-primary dark:hover:text-white hover:text-primary dark:hover:bg-white/5 hover:bg-primary/10 text-white flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between"
+          >
+            Download my CV
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-download w-4 h-4"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path><path
+                d="M7 11l5 5l5 -5"></path><path d="M12 4l0 12"></path></svg
+            >
+          </button>
+        </div>
+      </Card>
+      {portfolioData.map(item => (
+        <SimplePortfolioItem client:load item={item} />
+      ))}
+      <Card
+      client:load
+        className="lg:row-span-2 ring-1 dark:ring-white/10 ring-primary/5 hover:ring-primary/5 bg-white dark:bg-secondary  dark:hover:ring-white/20 overflow-hidden duration-300 shadow-xl dark:shadow-thick rounded-3xl p-8"
+      >
+        <TechStackCard />
+      </Card>
+    </CardContainer>
+</section>
