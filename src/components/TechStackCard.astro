@@ -70,7 +70,7 @@ const categories: Category[] = [
   {
     name: 'AI',
     tools: [
-      { name: 'Claude 3.5 Sonnet', logo: claudeLogo },
+      { name: 'Claude', logo: claudeLogo },
       { name: 'Midjourney', logo: midjourneyLogo },
     ],
   },
@@ -78,7 +78,7 @@ const categories: Category[] = [
 ---
 
 <div class="max-w-3xl mx-auto dark:text-white">
-    <h2 class="text-xl mb-6">My Tech Stack</h2>
+    <h2 class="text-xl mb-6">My tech stack</h2>
     {categories.map((category) => (
       <div class="mb-8">
         <h3 class="mb-2 dark:text-gray-400">{category.name}</h3>

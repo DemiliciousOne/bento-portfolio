@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets';
+import astroLogo from '@assets/logos/astro.svg'
+import reactLogo from '@assets/logos/react.svg'
+import typescriptLogo from '@assets/logos/typescript.svg'
+import framerLogo from '@assets/logos/framer.svg'
+import cloudflarePagesLogo from '@assets/logos/cloudflarepages.svg'
+import tailwindLogo from '@assets/logos/tailwind.svg'
+
+interface Tech {
+  name: string;
+  logo: ImageMetadata;
+}
+
+const techStack: Tech[] = [
+{ name: 'Astro', logo: astroLogo },
+{ name: 'React', logo: reactLogo },
+{ name: 'TypeScript', logo: typescriptLogo },
+{ name: 'Tailwind CSS', logo: tailwindLogo },
+{ name: 'Framer Motion', logo: framerLogo },
+{ name: 'Cloudflare Pages', logo: cloudflarePagesLogo }
+  
+];
+---
+
+<div>
+  <div class="space-y-4">
+    <h2 class="text-xl tracking-tight text-primary dark:text-white md:text-2xl">
+      About this website
+    </h2>
+    <p class="text-sm lg:text-lg text-zinc-500 dark:text-zinc-400 font-light">
+      <a 
+        href="https://github.com/DemiliciousOne/bento-portfolio" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="inline-flex items-center underline hover:text-primary dark:hover:text-white transition-colors"
+      >
+        Source code on Github
+        <img 
+          src="/src/assets/icons/external-link.svg" 
+          alt="External link" 
+          class="ml-1 w-4 h-4 inline"
+        />
+      </a>
+    </p>
+    <div class="text-sm lg:text-lg text-zinc-500 dark:text-zinc-400 font-light">
+      <p>Design influences:</p>
+      <ul class="list-none pl-2">
+        <li>🖤 Beautiful dark-themed websites like Linear.app and Diagram.com</li>
+        <li>🐱 Catppuccin Mocha Palette</li>
+        <li>🍱 Bento UI trend</li>
+      </ul>
+    </div>
+  
+    
+  
+    <div class="text-sm lg:text-lg text-zinc-500 dark:text-zinc-400 font-light">
+      <p>Built with</p>
+      <div class="flex flex-wrap gap-2 mt-2">
+        {techStack.map((tool) => (
+          <div class="flex items-center bg-gray-200 dark:bg-secondary-light dark:text-gray-200 text-sm font-light rounded-full px-3 py-1">
+            <Image src={tool.logo} alt={tool.name} width={20} height={20} class="mr-2 max-h-5" />
+            <span>{tool.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>

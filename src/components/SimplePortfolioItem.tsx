@@ -39,7 +39,7 @@ const SimplePortfolioItem: React.FC<SimplePortfolioItemProps> = ({ item }) => {
       whileInView="visible"
       viewport={{ once: true }}
       variants={containerVariants}
-      className="text-center cursor-pointer ring-1 lg:row-start-3 h-full flex p-8 dark:bg-secondary flex-col justify-start hover:ring-primary/5 dark:hover:ring-trueWhite/50 dark:ring-white/10 ring-primary/5 relative rounded-3xl overflow-hidden bg-white shadow-xl dark:shadow-thick group"
+      className="order-4 lg:order-none text-center cursor-pointer ring-1 lg:row-start-3 h-full flex p-8 dark:bg-secondary flex-col justify-start hover:ring-primary/5 dark:hover:ring-trueWhite/50 dark:ring-white/10 ring-primary/5 relative rounded-3xl overflow-hidden bg-white shadow-xl dark:shadow-thick group"
     >
       <motion.div variants={childVariants} className="w-full">
         <a

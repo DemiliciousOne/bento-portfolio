@@ -60,7 +60,7 @@ const Card: React.FC<CardProps> = ({ className = "", children }) => {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.00001 }}
       variants={containerVariants}
       ref={cardRef}
       className={`card relative overflow-hidden ring-1 dark:ring-white/10 ${className}`}

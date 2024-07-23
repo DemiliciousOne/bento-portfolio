@@ -9,4 +9,7 @@ import icon from "astro-icon";
 export default defineConfig({
   site: "https://demiyang.blog",
   integrations: [tailwind(), sitemap(), react(), icon()],
+  server: {
+    host: true,
+  },
 });

@@ -105,6 +105,7 @@ module.exports = {
         white: "#CDD6F4",
         lavender: "#b4befe",
         blue: "#89b4fa",
+        mauve: "#9D4EDD",
       },
       borderRadius: {
         "4xl": "2rem",
