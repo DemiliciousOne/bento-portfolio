@@ -78,10 +78,10 @@ const categories: Category[] = [
 ---
 
 <div class="max-w-3xl mx-auto dark:text-white">
-    <h2 class="text-xl mb-6">My tech stack</h2>
+    <h2 class="text-xl mb-4">My tech stack</h2>
     {categories.map((category) => (
       <div class="mb-8">
-        <h3 class="mb-2 dark:text-gray-400">{category.name}</h3>
+        <h3 class="mb-2 lg:text-lg dark:text-gray-400">{category.name}</h3>
         <div class="flex flex-wrap gap-2">
           {category.tools.map((tool) => (
             <div class="flex items-center bg-gray-200 dark:bg-secondary-light dark:text-gray-200 text-sm font-light rounded-full px-3 py-1">

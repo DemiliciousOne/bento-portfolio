@@ -6,6 +6,7 @@ import typescriptLogo from '@assets/logos/typescript.svg'
 import framerLogo from '@assets/logos/framer.svg'
 import cloudflarePagesLogo from '@assets/logos/cloudflarepages.svg'
 import tailwindLogo from '@assets/logos/tailwind.svg'
+import externalLinkIcon from '@assets/icons/external-link.svg'
 
 interface Tech {
   name: string;
@@ -37,7 +38,7 @@ const techStack: Tech[] = [
       >
         Source code on Github
         <img 
-          src="/src/assets/icons/external-link.svg" 
+          src={externalLinkIcon.src}
           alt="External link" 
           class="ml-1 w-4 h-4 inline"
         />
