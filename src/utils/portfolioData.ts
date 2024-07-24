@@ -18,8 +18,8 @@ export const portfolioData = [
       "A modern remote job board that shows hundreds of new opportunities each day.",
     featureImage: "/screenshots/career-vault-screenshot.png",
     achievementIcon: "/icons/people.svg",
-    achievement: "73k monthly visitors",
-    techStack: ["SolidJS", "Astro", "TypeScript", "Node.js"],
+    achievement: "120k monthly visitors",
+    techStack: ["SolidJS", "Astro", "TypeScript", "Figma"],
   },
   {
     id: 2,
