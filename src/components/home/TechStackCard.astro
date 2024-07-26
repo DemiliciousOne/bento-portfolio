@@ -1,12 +1,10 @@
 ---
-import { Image } from 'astro:assets';
 import astroLogo from '@assets/logos/astro.svg'
 import claudeLogo from '@assets/logos/claude.svg'
 import tailwindLogo from '@assets/logos/tailwind.svg'
 import webflowLogo from '@assets/logos/webflow.svg'
 import figmaLogo from '@assets/logos/figma.svg'
 import nodejsLogo from '@assets/logos/nodejs.svg'
-import procreateLogo from '@assets/logos/procreate.svg'
 import midjourneyLogo from '@assets/logos/midjourney.svg'
 import postgresqlLogo from '@assets/logos/postgresql.svg'
 import reactLogo from '@assets/logos/react.svg'
@@ -14,9 +12,9 @@ import typescriptLogo from '@assets/logos/typescript.svg'
 import javascriptLogo from '@assets/logos/javascript.svg'
 import pythonLogo from '@assets/logos/python.svg'
 import solidjsLogo from '@assets/logos/solidjs.svg'
-import gatsbyLogo from '@assets/logos/gatsby.svg'
 import jestLogo from '@assets/logos/jest.svg'
 import cypressLogo from '@assets/logos/cypress.svg'
+import Tag from '@components/ui/Tag.astro'
 
 interface Tool {
   name: string;
@@ -84,11 +82,7 @@ const categories: Category[] = [
         <h3 class="mb-2 lg:text-lg dark:text-gray-400">{category.name}</h3>
         <div class="flex flex-wrap gap-2">
           {category.tools.map((tool) => (
-            <div class="flex items-center bg-gray-200 dark:bg-secondary-light dark:text-gray-200 text-sm font-light rounded-full px-3 py-1">
-                <Image src={tool.logo} alt={tool.name} width={20} height={20} class="mr-2 max-h-5" />
-
-              <span>{tool.name}</span>
-            </div>
+            <Tag name={tool.name} logo={tool.logo} />
           ))}
         </div>
       </div>

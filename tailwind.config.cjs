@@ -90,17 +90,12 @@ module.exports = {
         thick: "0px 7px 32px rgb(0 0 0 / 35%);",
       },
       colors: {
-        // Gray
         primary: "#1E1E2E",
         secondary: {
           DEFAULT: "#1e1e2e",
           light: "#2a2a40",
         },
         tertiary: "#11111B",
-        // Purple
-        //primary:"#080118",
-        //secondary:"#140d23",
-        //tertiary:"#1d1333",
         trueWhite: "#FFFFFF",
         white: "#CDD6F4",
         lavender: "#b4befe",

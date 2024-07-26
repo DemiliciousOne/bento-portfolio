@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  name: string;
+  logo?: ImageMetadata;
+}
+
+const { name, logo } = Astro.props;
+---
+
+<div class="flex items-center bg-gray-200 dark:bg-secondary-light dark:text-gray-200 text-sm font-light rounded-full px-3 py-1">
+  {logo && <Image src={logo} alt={name} width={20} height={20} class="mr-2 max-h-5" />}
+  <span>{name}</span>
+</div>
